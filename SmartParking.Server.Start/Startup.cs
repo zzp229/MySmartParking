@@ -31,6 +31,7 @@ namespace SmartParking.Server.Start
             services.AddTransient<IConfiguration.IConfiguration, Configuration.Configuration>();
             services.AddTransient<IEFContext.IEFContext, EFContext.EFContext>();
             services.AddTransient<ILoginService, LoginService>();
+            services.AddTransient<IMenuService, MenuService>();
 
             services.AddControllers();
 

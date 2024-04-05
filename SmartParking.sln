@@ -61,6 +61,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartParking.Client.Entity"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartParking.Client.Assets", "Client\SmartParking.Client.Assets\SmartParking.Client.Assets.csproj", "{A2B43048-FFD7-452E-A2CD-0EFEDAEC17BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartParking.Client.MainModule", "Client\SmartParking.Client.MainModule\SmartParking.Client.MainModule.csproj", "{1B7725FD-C3A7-4DF2-A304-DD42FA803B5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartParking.Client.BaseModule", "Client\SmartParking.Client.BaseModule\SmartParking.Client.BaseModule.csproj", "{0A27CFB3-0CAE-4B86-A2D8-4EEB64099BF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +139,14 @@ Global
 		{A2B43048-FFD7-452E-A2CD-0EFEDAEC17BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2B43048-FFD7-452E-A2CD-0EFEDAEC17BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2B43048-FFD7-452E-A2CD-0EFEDAEC17BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7725FD-C3A7-4DF2-A304-DD42FA803B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7725FD-C3A7-4DF2-A304-DD42FA803B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7725FD-C3A7-4DF2-A304-DD42FA803B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7725FD-C3A7-4DF2-A304-DD42FA803B5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A27CFB3-0CAE-4B86-A2D8-4EEB64099BF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A27CFB3-0CAE-4B86-A2D8-4EEB64099BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A27CFB3-0CAE-4B86-A2D8-4EEB64099BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A27CFB3-0CAE-4B86-A2D8-4EEB64099BF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -167,6 +179,8 @@ Global
 		{2F8E8F19-5582-47FC-9A1E-D276839C5240} = {ECCF25B2-3ABF-4946-BB5D-BBB9AEDA06C5}
 		{38E636F3-FFF6-41B3-BD10-BFAF7E99EA1C} = {B7FF9FD2-A6C4-412C-80CE-E8EFB8345341}
 		{A2B43048-FFD7-452E-A2CD-0EFEDAEC17BB} = {7A119F08-1B46-48DC-B6E2-5FCB77E31C45}
+		{1B7725FD-C3A7-4DF2-A304-DD42FA803B5E} = {2824775F-84B9-4F72-AC72-EFC4FA5D740E}
+		{0A27CFB3-0CAE-4B86-A2D8-4EEB64099BF1} = {2824775F-84B9-4F72-AC72-EFC4FA5D740E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6D9C3A80-0C75-48E0-B793-4996E3AF4C97}

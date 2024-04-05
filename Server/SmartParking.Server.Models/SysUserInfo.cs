@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -17,5 +18,8 @@ namespace SmartParking.Server.Models
         public string Password { get; set; }
         [Column("user_icon")]
         public string UserIcon { get; set; }
+
+        [NotMapped] // 不会映射到数据库表
+        public List<MenuInfo> Menus { get; set; }
     }
 }

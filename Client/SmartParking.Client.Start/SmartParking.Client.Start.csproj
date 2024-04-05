@@ -9,10 +9,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SmartParking.Client.Assets\SmartParking.Client.Assets.csproj" />
+    <ProjectReference Include="..\SmartParking.Client.BaseModule\SmartParking.Client.BaseModule.csproj" />
     <ProjectReference Include="..\SmartParking.Client.BLL\SmartParking.Client.BLL.csproj" />
     <ProjectReference Include="..\SmartParking.Client.Common\SmartParking.Client.Common.csproj" />
     <ProjectReference Include="..\SmartParking.Client.DAL\SmartParking.Client.DAL.csproj" />
     <ProjectReference Include="..\SmartParking.Client.IBLL\SmartParking.Client.IBLL.csproj" />
     <ProjectReference Include="..\SmartParking.Client.IDAL\SmartParking.Client.IDAL.csproj" />
+    <ProjectReference Include="..\SmartParking.Client.MainModule\SmartParking.Client.MainModule.csproj" />
   </ItemGroup>
 </Project>

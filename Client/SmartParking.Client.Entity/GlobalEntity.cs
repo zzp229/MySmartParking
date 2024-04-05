@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SmartParking.Client.Entity
 {
+    /// <summary>
+    /// 全局变量
+    /// </summary>
     public class GlobalEntity
     {
         public static UserEntity CurrentUserInfo { get; set; }

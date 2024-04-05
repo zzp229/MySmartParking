@@ -1,8 +1,10 @@
 ﻿using Prism.Ioc;
+using Prism.Modularity;
 using SmartParking.Client.BLL;
 using SmartParking.Client.DAL;
 using SmartParking.Client.IBLL;
 using SmartParking.Client.IDAL;
+using SmartParking.Client.MainModule;
 using SmartParking.Client.Start.Views;
 using System.Windows;
 
@@ -34,6 +36,15 @@ namespace SmartParking.Client.Start
         {
             containerRegistry.Register<ILoginDal, LoginDal>();
             containerRegistry.Register<ILoginBLL, LoginBLL>();
+        }
+
+
+        // 添加模块
+        protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
+        {
+            // 可以改为自动扫描
+            moduleCatalog.AddModule<MainModule.MainModule>();
+            moduleCatalog.AddModule<BaseModule.BaseInfoModule>();
         }
     }
 }

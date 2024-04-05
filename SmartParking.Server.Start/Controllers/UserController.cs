@@ -6,6 +6,7 @@ using System.Text;
 using System;
 using SmartParking.Server.Models;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace SmartParking.Server.Start.Controllers
 {
@@ -14,10 +15,12 @@ namespace SmartParking.Server.Start.Controllers
     public class UserController : ControllerBase
     {
         private readonly ILoginService _loginService;
+        private readonly IMenuService _menuService;
 
-        public UserController(ILoginService loginService)
+        public UserController(ILoginService loginService, IMenuService menuService)
         {
             this._loginService = loginService;
+            this._menuService = menuService;
         }
 
 
@@ -34,6 +37,10 @@ namespace SmartParking.Server.Start.Controllers
                 SysUserInfo sysUserInfo = userInfo[0];
 
                 // 菜单
+                // 需要进行权限管理
+                // menu-role_menu-role-role_user-user
+                List<MenuInfo> menus = _menuService.GetMenusByUserId(sysUserInfo.UserId);
+                sysUserInfo.Menus = menus;  // 当前用户的菜单
 
                 return Ok(sysUserInfo);
             }

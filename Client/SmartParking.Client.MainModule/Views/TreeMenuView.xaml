@@ -10,8 +10,8 @@
     mc:Ignorable="d">
 
     <UserControl.Resources>
-        <!--<ResourceDictionary Source="pack://application:,,,/SmartParking.Client.Assets;component/Style/BaseResources.xaml"/>-->
-        <ResourceDictionary Source="pack://application:,,,/SmartParking.Client.Assets;component/Style/BaseResources.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/SmartParking.Client.Assets;component/Style/BaseResources.xaml"/>
+        <!--<ResourceDictionary Source="/SmartParking.Client.Assets;component/Style/BaseResources.xaml" />-->
     </UserControl.Resources>
 
     <Grid Background="#66FFFFFF">

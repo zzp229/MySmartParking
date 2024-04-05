@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IConfiguration\IConfiguration.csproj" />
     <ProjectReference Include="..\SmarkParking.Server.IService\SmarkParking.Server.IService.csproj" />
     <ProjectReference Include="..\SmartParking.Server.IEFContext\SmartParking.Server.IEFContext.csproj" />
   </ItemGroup>

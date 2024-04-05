@@ -18,6 +18,10 @@ namespace SmartParking.Server.Models
         public string Password { get; set; }
         [Column("user_icon")]
         public string UserIcon { get; set; }
+        [Column("real_name")]
+        public string RealName { get; set; }
+        [Column("age")]
+        public int Age { get; set; }
 
         [NotMapped] // 不会映射到数据库表
         public List<MenuInfo> Menus { get; set; }

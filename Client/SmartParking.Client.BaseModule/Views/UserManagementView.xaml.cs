@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SmartParking.Client.BaseModule
+namespace SmartParking.Client.BaseModule.Views
 {
     /// <summary>
     /// Interaction logic for UserControl1.xaml
     /// </summary>
-    public partial class UserManagermentView : UserControl
+    public partial class UserManagementView : UserControl
     {
-        public UserManagermentView()
+        public UserManagementView()
         {
             InitializeComponent();
         }

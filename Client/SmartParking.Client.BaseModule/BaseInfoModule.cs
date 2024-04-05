@@ -1,5 +1,6 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
+using SmartParking.Client.BaseModule.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,8 @@ namespace SmartParking.Client.BaseModule
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // 用上这个需要下载Prism.Wpf
-            containerRegistry.RegisterForNavigation<UserManagermentView>();
+            containerRegistry.RegisterForNavigation<UserManagementView>();    // test是做一个标记方便查找关闭
+            containerRegistry.RegisterDialog<ModifyUserDialog>();
         }
     }
 }

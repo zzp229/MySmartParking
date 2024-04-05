@@ -19,11 +19,11 @@ namespace SmartParking.Client.MainModule.ViewModels
 
         public TreeMenuViewModel(IRegionManager regionManager)
         {
+            this._regionManager = regionManager;    // 要在FillMenus调用前赋值要不然就是null
             // 需要获取菜单数据
             origMenMenus = GlobalEntity.CurrentUserInfo?.Menus;
 
             this.FillMenus(Menus, 0);
-            this._regionManager = regionManager;
         }
 
 

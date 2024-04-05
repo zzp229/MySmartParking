@@ -15,7 +15,7 @@ namespace SmartParking.Client.DAL
             contents.Add("username", new StringContent(username));
             contents.Add("password", new StringContent(password));
 
-            return this.PostDatas("user/login", contents);
+            return this.PostDatas($"{domain}user/login", contents);
         }
     }
 }

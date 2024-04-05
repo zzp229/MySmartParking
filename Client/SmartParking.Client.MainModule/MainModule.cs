@@ -23,13 +23,15 @@ namespace SmartParking.Client.MainModule
 
             var regionManager = containerProvider.Resolve<IRegionManager>();    // 通过ioc获取regionManager对象
             regionManager.RegisterViewWithRegion("LeftMenuTreeRegion", typeof(TreeMenuView));   // 向区域LeftMenuTreeRegion放入TreeMenuView
+            regionManager.RegisterViewWithRegion("MainHeaderRegion", typeof(MainHeaderView));
 
         }
 
-        // 注册要放到Region的控件
+        // 注册要放到Region的控件（ViewModel会自动绑定，这样可以在MainView的区域中显示）
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.Register<TreeMenuView>();
+            containerRegistry.Register<MainHeaderView>();
         }
     }
 }

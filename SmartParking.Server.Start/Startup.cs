@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using SmarkParking.Server.Service;
+using Configuration;
+using IConfiguration;
 
 namespace SmartParking.Server.Start
 {
@@ -28,10 +30,12 @@ namespace SmartParking.Server.Start
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IUtils, Utils>(); // 这里面有个MD5加密
             services.AddTransient<IConfiguration.IConfiguration, Configuration.Configuration>();
             services.AddTransient<IEFContext.IEFContext, EFContext.EFContext>();
             services.AddTransient<ILoginService, LoginService>();
             services.AddTransient<IMenuService, MenuService>();
+            services.AddTransient<IUserService, UserService>();
 
             services.AddControllers();
 

@@ -9,13 +9,13 @@ namespace SmartParking.Client.DAL
 {
     public class WebDataAccess
     {
-        private string domain = "http://localhost:5000/api/";
+        protected string domain = "http://localhost:5000/api/";
 
         public Task<string> GetDatas(string url)
         {
             using (HttpClient client = new HttpClient())
             {
-                var resp = client.GetAsync($"{domain}{url}").GetAwaiter().GetResult();
+                var resp = client.GetAsync(url).GetAwaiter().GetResult();  // 从api中获取数据
                 return resp.Content.ReadAsStringAsync();
             }
         }
@@ -39,8 +39,17 @@ namespace SmartParking.Client.DAL
         {
             using (HttpClient client = new HttpClient())
             {
-                var resp = client.PostAsync($"{domain}{url}", this.GetFormData(contents)).GetAwaiter().GetResult();
+                var resp = client.PostAsync(url, this.GetFormData(contents)).GetAwaiter().GetResult();
                 return resp?.Content.ReadAsStringAsync();
+            }
+        }
+
+        public Task<string> PostDatas(string url, HttpContent contents)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                var resp = client.PostAsync(url, contents).GetAwaiter().GetResult();
+                return resp.Content.ReadAsStringAsync();
             }
         }
     }

@@ -30,6 +30,15 @@ namespace SmartParking.Client.MainModule.Models
         {
             get => new DelegateCommand(() =>
             {
+                if (_regionManager == null)
+                {
+
+                }
+                else
+                {
+
+                }
+
                 if ((this.Children == null || this.Children.Count == 0) &&
                     !string.IsNullOrEmpty(this.TargetView))
                 {

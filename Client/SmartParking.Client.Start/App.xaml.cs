@@ -7,6 +7,7 @@ using SmartParking.Client.IDAL;
 using SmartParking.Client.MainModule;
 using SmartParking.Client.Start.Views;
 using System.Windows;
+using System.Windows.Threading;
 
 namespace SmartParking.Client.Start
 {
@@ -34,8 +35,13 @@ namespace SmartParking.Client.Start
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.Register<Dispatcher>(() => Application.Current.Dispatcher);   // 这个是修改控件的线程
+
             containerRegistry.Register<ILoginDal, LoginDal>();
+            containerRegistry.Register<IUserDal, UserDal>();
+
             containerRegistry.Register<ILoginBLL, LoginBLL>();
+            containerRegistry.Register<IUserBLL, UserBLL>();
         }
 
 

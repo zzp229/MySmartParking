@@ -28,7 +28,7 @@ namespace SmartParking.Client.Start.ViewModels
         }
 
 
-        private string _password;
+        private string _password = "123456";
 
         public string Password
         {

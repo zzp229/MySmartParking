@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.Unity" Version="8.1.97" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartParking.Client.Assets\SmartParking.Client.Assets.csproj" />
+    <ProjectReference Include="..\SmartParking.Client.BLL\SmartParking.Client.BLL.csproj" />
+    <ProjectReference Include="..\SmartParking.Client.Common\SmartParking.Client.Common.csproj" />
+    <ProjectReference Include="..\SmartParking.Client.DAL\SmartParking.Client.DAL.csproj" />
+    <ProjectReference Include="..\SmartParking.Client.IBLL\SmartParking.Client.IBLL.csproj" />
+    <ProjectReference Include="..\SmartParking.Client.IDAL\SmartParking.Client.IDAL.csproj" />
+  </ItemGroup>
+</Project>

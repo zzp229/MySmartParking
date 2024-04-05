@@ -4,4 +4,14 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Server\Configuration\Configuration.csproj" />
+    <ProjectReference Include="..\Server\IConfiguration\IConfiguration.csproj" />
+    <ProjectReference Include="..\Server\SmarkParking.Server.IService\SmarkParking.Server.IService.csproj" />
+    <ProjectReference Include="..\Server\SmarkParking.Server.Service\SmarkParking.Server.Service.csproj" />
+    <ProjectReference Include="..\Server\SmartParking.Server.EFContext\SmartParking.Server.EFContext.csproj" />
+    <ProjectReference Include="..\Server\SmartParking.Server.IEFContext\SmartParking.Server.IEFContext.csproj" />
+    <ProjectReference Include="..\Server\SmartParking.Server.Models\SmartParking.Server.Models.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -21,7 +21,7 @@ namespace SmartParking.Client.MainModule.ViewModels
         {
             this._regionManager = regionManager;    // 要在FillMenus调用前赋值要不然就是null
             // 需要获取菜单数据
-            origMenMenus = GlobalEntity.CurrentUserInfo?.Menus;
+            origMenMenus = GlobalEntity.CurrentUserInfo?.Menus; // 这个用户的菜单
 
             this.FillMenus(Menus, 0);
         }
@@ -48,6 +48,7 @@ namespace SmartParking.Client.MainModule.ViewModels
                     };
                     menus.Add(mm);
 
+                    // 自己调用自己
                     FillMenus(mm.Children = new List<MenuItemModel>(), item.MenuId);
                 }
             }

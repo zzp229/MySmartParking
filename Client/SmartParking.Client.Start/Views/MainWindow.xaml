@@ -53,15 +53,19 @@
                                     MinWidth="10"
                                     MaxWidth="30" />
                             </Grid.ColumnDefinitions>
+                            <!--TabItem标题显示的内容-->
                             <TextBlock
                                 Margin="10,5,5,5"
                                 VerticalAlignment="Center"
                                 Text="{TemplateBinding Header}" />
+                            <!--关闭按钮可隐藏-->
                             <Grid
                                 Name="close_grid"
                                 Grid.Column="1"
                                 Width="30"
                                 Visibility="Collapsed">
+                                <!--这个应该是关闭按钮
+                                绑定切换过来页面的CloseCommand，这个的实现在ViewModelBase中（页面通用方法）-->
                                 <Button
                                     Name="close_btn"
                                     Command="{Binding DataContext.CloseCommand}"
@@ -72,6 +76,7 @@
                             </Grid>
                         </Grid>
                         <ControlTemplate.Triggers>
+                            <!--绑定切换过来页面的IsCanClose-->
                             <DataTrigger Binding="{Binding DataContext.IsCanClose}" Value="True">
                                 <Setter TargetName="close_grid" Property="Visibility" Value="Visible" />
                             </DataTrigger>
@@ -85,6 +90,7 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+            <!--选中和鼠标放上去就变色-->
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#EEE" />
@@ -107,6 +113,7 @@
 
     <Grid Margin="1" Background="Transparent">
         <DockPanel>
+            <!--左侧-->
             <Grid
                 Width="230"
                 Background="#EEE"
@@ -115,6 +122,7 @@
                     <RowDefinition Height="auto" />
                     <RowDefinition />
                 </Grid.RowDefinitions>
+                <!--头像-->
                 <StackPanel>
                     <Image
                         Width="70"

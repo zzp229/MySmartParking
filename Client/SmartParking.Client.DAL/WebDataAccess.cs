@@ -35,15 +35,17 @@ namespace SmartParking.Client.DAL
             return postContent;
         }
 
+        // 这是多个获取多个formData参数的
         public Task<string> PostDatas(string url, Dictionary<string, HttpContent> contents)
         {
             using (HttpClient client = new HttpClient())
             {
-                var resp = client.PostAsync(url, this.GetFormData(contents)).GetAwaiter().GetResult();
-                return resp?.Content.ReadAsStringAsync();
+                var resp = client.PostAsync(url, this.GetFormData(contents)).GetAwaiter().GetResult();  // 发送Post请求
+                return resp?.Content.ReadAsStringAsync();   // 返回结果
             }
         }
 
+        // 这个是返回一个formData的
         public Task<string> PostDatas(string url, HttpContent contents)
         {
             using (HttpClient client = new HttpClient())

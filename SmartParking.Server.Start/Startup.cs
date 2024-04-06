@@ -38,8 +38,6 @@ namespace SmartParking.Server.Start
             services.AddTransient<IUserService, UserService>();
 
             services.AddControllers();
-
-            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

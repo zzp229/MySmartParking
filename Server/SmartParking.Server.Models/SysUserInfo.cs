@@ -24,6 +24,6 @@ namespace SmartParking.Server.Models
         public int Age { get; set; }
 
         [NotMapped] // 不会映射到数据库表
-        public List<MenuInfo> Menus { get; set; }
+        public List<MenuInfo> Menus { get; set; }   // 当前用户的菜单
     }
 }

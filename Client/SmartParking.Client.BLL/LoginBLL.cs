@@ -17,7 +17,7 @@ namespace SmartParking.Client.BLL
 
         public async Task<bool> Login(string username, string password)
         {
-            // Json串
+            // 通过DAL获取请求返回的Json串
             var loginStr = await _loginDal.Login(username, password);
             // 用户信息的反序列化（反序列化为对象）
             UserEntity userEntity = Newtonsoft.Json.JsonConvert.DeserializeObject<UserEntity>(loginStr);

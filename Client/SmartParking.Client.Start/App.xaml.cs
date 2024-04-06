@@ -33,6 +33,7 @@ namespace SmartParking.Client.Start
                 base.InitializeShell(shell);
         }
 
+        // 注册好了就能通过构造方法获取了
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.Register<Dispatcher>(() => Application.Current.Dispatcher);   // 这个是修改控件的线程

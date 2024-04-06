@@ -70,7 +70,7 @@ namespace SmartParking.Client.Start.ViewModels
                 // 登录操作
                 if (_loginBLL.Login(this.UserName, this.Password).GetAwaiter().GetResult())
                 {
-                    // 关闭登录窗口，并且DialogResult返回True；
+                    // 关闭登录窗口，并且DialogResult返回True给主窗口；
                     (obj as Window).DialogResult = true;
                 }
                 else

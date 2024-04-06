@@ -8,7 +8,9 @@
     xmlns:prism="http://prismlibrary.com/"
     xmlns:pwdHelper="clr-namespace:SmartParking.Client.Common;assembly=SmartParking.Client.Common"
     xmlns:viewmodels="clr-namespace:SmartParking.Client.Start.ViewModels"
-    Title="登录" Height="328" Width="428"
+    Title="登录"
+    Width="428"
+    Height="328"
     prism:ViewModelLocator.AutoWireViewModel="True"
     FontSize="30"
     ResizeMode="NoResize"
@@ -129,7 +131,7 @@
 
     </Window.Resources>
 
-    <!--无边框-->
+    <!--  无边框  -->
     <WindowChrome.WindowChrome>
         <WindowChrome
             GlassFrameThickness="-1"
@@ -166,16 +168,16 @@
             Orientation="Horizontal">
             <Button
                 Height="28"
-                FontSize="18"
                 Background="Transparent"
                 Content="&#xe6bf;"
+                FontSize="18"
                 Style="{StaticResource IconButtonStyle}" />
             <Button
-                FontSize="16"
                 Height="28"
                 Background="Transparent"
                 Click="Button_Click"
                 Content="&#xe625;"
+                FontSize="16"
                 Style="{StaticResource IconButtonStyle}" />
         </StackPanel>
 
@@ -203,27 +205,55 @@
         </Border>
 
 
-        <StackPanel Grid.Row="1" VerticalAlignment="Bottom" Width="240" Margin="0,0,0,10">
-            <TextBox Text="{Binding UserName,UpdateSourceTrigger=PropertyChanged}"
-             Height="33" FontSize="18" Background="Transparent"
-             Template="{StaticResource UserNameTextBoxTemplate}"/>
-            <PasswordBox pwdHelper:PasswordHelper.Password="{Binding Password,Mode=TwoWay}"
-                 pwdHelper:PasswordHelper.Attach="True"
-                 Height="33" FontSize="18"
-                 Template="{StaticResource PasswordBoxTemplate}"/>
-            <UniformGrid Rows="1" Margin="0,10">
-                <CheckBox FontSize="13" Content="自动登录" Foreground="#BBB" VerticalContentAlignment="Center"/>
-                <CheckBox FontSize="13" Content="记住密码" Foreground="#BBB" VerticalContentAlignment="Center"/>
-                <TextBlock FontSize="13" HorizontalAlignment="Right">
-            <Hyperlink>找回密码</Hyperlink>
+        <StackPanel
+            Grid.Row="1"
+            Width="240"
+            Margin="0,0,0,10"
+            VerticalAlignment="Bottom">
+            <TextBox
+                Height="33"
+                Background="Transparent"
+                FontSize="18"
+                Template="{StaticResource UserNameTextBoxTemplate}"
+                Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}" />
+            <PasswordBox
+                Height="33"
+                pwdHelper:PasswordHelper.Attach="True"
+                pwdHelper:PasswordHelper.Password="{Binding Password, Mode=TwoWay}"
+                FontSize="18"
+                Template="{StaticResource PasswordBoxTemplate}" />
+            <UniformGrid Margin="0,10" Rows="1">
+                <CheckBox
+                    VerticalContentAlignment="Center"
+                    Content="自动登录"
+                    FontSize="13"
+                    Foreground="#BBB" />
+                <CheckBox
+                    VerticalContentAlignment="Center"
+                    Content="记住密码"
+                    FontSize="13"
+                    Foreground="#BBB" />
+                <TextBlock HorizontalAlignment="Right" FontSize="13">
+                    <!--用一个超链接显示-->
+                    <Hyperlink>找回密码</Hyperlink>
                 </TextBlock>
             </UniformGrid>
-            <Button Content="登   录"  Height="35" Margin="0,5,0,0" Foreground="White" FontSize="14"
-            Command="{Binding LoginCommand}" 
-            CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
-            Template="{StaticResource LoginButtonTemplate}"/>
-            <TextBlock Text="{Binding ErrorMsg}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="11" Foreground="Red"
-                   Margin="0,5"/>
+            <Button
+                Height="35"
+                Margin="0,5,0,0"
+                Command="{Binding LoginCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
+                Content="登   录"
+                FontSize="14"
+                Foreground="White"
+                Template="{StaticResource LoginButtonTemplate}" />
+            <TextBlock
+                Margin="0,5"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="11"
+                Foreground="Red"
+                Text="{Binding ErrorMsg}" />
         </StackPanel>
 
 

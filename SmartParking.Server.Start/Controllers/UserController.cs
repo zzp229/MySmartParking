@@ -35,12 +35,12 @@ namespace SmartParking.Server.Start.Controllers
         public IActionResult Login([FromForm] string username, [FromForm] string password)
         {
             string pwd = _utils.GetMD5Str(_utils.GetMD5Str(password) + "|" + username);
-            var users = _loginService.Query<SysUserInfo>(u => u.UserName == username && u.Password == pwd);
+            var users = _loginService.Query<SysUserInfo>(u => u.UserName == username && u.Password == pwd); // 查询符合条件的所有
 
             if (users?.Count() > 0)
             {
                 var userInfo = users.ToList();
-                SysUserInfo sysUserInfo = userInfo[0];
+                SysUserInfo sysUserInfo = userInfo[0];  // 拿出第一个
 
                 // 菜单
                 // 需要进行权限管理

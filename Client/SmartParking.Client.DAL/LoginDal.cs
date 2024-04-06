@@ -8,6 +8,7 @@ namespace SmartParking.Client.DAL
 {
     public class LoginDal : WebDataAccess, ILoginDal
     {
+        // 将账号和密码发送过去
         public Task<string> Login(string username, string password)
         {
             // 填充好Post请求的form-data
